@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="kr.co.teamfresh.ssh.dawnmarket.presentation.viewmodel.CategoryViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".presentation.view.CategoryDetailFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_chevron_left"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="16dp"
+                app:tint="@color/Gray__700"/>
+
+            <TextView
+                android:id="@+id/category_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="18dp"
+                style="@style/title"
+                android:text="@{viewModel.subCategoryList.data.dispClasNm}"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/cart"
+                android:layout_marginRight="14dp"
+                app:tint="@color/Gray_600"/>
+            <ImageView
+                android:id="@+id/cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_cart_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="16dp"
+                app:tint="@color/Gray_600"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/app_bar"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/subcategory_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stateListAnimator="@null">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/sub_categorylist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        android:orientation="vertical"
+                        tools:listitem="@layout/subcategory_list_item"
+                        app:spanCount="3" />
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/Gray_stroke" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/stickyHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_anchor="@id/subcategory_container"
+                    app:layout_anchorGravity="bottom"
+                    android:background="@color/white">
+                    <TextView
+                        android:id="@+id/align_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{@string/_건의_검색결과(viewModel.paginationInfo.totalElements)}"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="24dp"
+                        style="@style/font13"
+                        android:textColor="@color/black_b" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/Gray_50"/>
+                    <LinearLayout
+                        android:id="@+id/align_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:id="@+id/linear1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:clickable="true"
+                            android:gravity="center_vertical">
+                            <View
+                                android:id="@+id/dot1"
+                                android:layout_width="3dp"
+                                android:layout_height="3dp"
+                                android:clickable="true"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="3dp"
+                                android:background="@drawable/align_dot" />
+                            <TextView
+                                android:id="@+id/align_text1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@drawable/bg_alignlist"
+                                android:text="@string/추천순"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linear2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:clickable="true"
+                            android:gravity="center_vertical">
+                            <View
+                                android:id="@+id/dot2"
+                                android:layout_width="3dp"
+                                android:layout_height="3dp"
+                                android:clickable="true"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="3dp"
+                                android:background="@drawable/align_dot" />
+                            <TextView
+                                android:id="@+id/align_text2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@drawable/bg_alignlist"
+                                android:text="@string/판매량순"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linear3"
+                            android:clickable="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <View
+                                android:id="@+id/dot3"
+                                android:layout_width="3dp"
+                                android:layout_height="3dp"
+                                android:clickable="true"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="3dp"
+                                android:background="@drawable/align_dot" />
+                            <TextView
+                                android:id="@+id/align_text3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@drawable/bg_alignlist"
+                                android:text="@string/낮은가격순"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/linear4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:clickable="true"
+                            android:gravity="center_vertical">
+                            <View
+                                android:id="@+id/dot4"
+                                android:layout_width="3dp"
+                                android:layout_height="3dp"
+                                android:clickable="true"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="3dp"
+                                android:background="@drawable/align_dot" />
+                            <TextView
+                                android:id="@+id/align_text4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@drawable/bg_alignlist"
+                                android:text="@string/높은가격순"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/product_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@layout/product_list_item"
+                app:spanCount="2"
+                android:elevation="-2dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

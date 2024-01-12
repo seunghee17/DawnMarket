@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">DawnMarket</string>
+    <string name="카테고리">카테고리</string>
+    <string name="즐겨찾기">즐겨찾기</string>
+    <string name="홈">홈</string>
+    <string name="장바구니">장바구니</string>
+    <string name="내_정보">내 정보</string>
+    <string name="로그인해주세요">로그인해주세요</string>
+    <string name="기획전_이벤트">기획전 / 이벤트</string>
+    <string name="N">N</string>
+    <string name="상품_전체">상품 전체</string>
+    <string name="_건의_검색결과">%1$d건의 검색결과</string>
+    <string name="추천순">추천순</string>
+    <string name="판매량순">판매량순</string>
+    <string name="낮은가격순">낮은가격순</string>
+    <string name="높은가격순">높은가격순</string>
+    <string name="옵션">옵션</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

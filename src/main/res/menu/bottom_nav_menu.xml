@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="@string/카테고리"
+        android:enabled="true"
+        android:id="@+id/categoryFragment"
+        android:icon="@drawable/ic_menu"/>
+    <item
+        android:title="@string/즐겨찾기"
+        android:enabled="true"
+        android:id="@+id/bookmarkFragment"
+        android:icon="@drawable/ic_star"/>
+    <item
+        android:title="@string/홈"
+        android:enabled="true"
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:title="@string/장바구니"
+        android:enabled="true"
+        android:id="@+id/shoppingFragment"
+        android:icon="@drawable/ic_shopping"/>
+    <item
+        android:title="@string/내_정보"
+        android:enabled="true"
+        android:id="@+id/mypageFragment"
+        android:icon="@drawable/ic_mypage"/>
+</menu>

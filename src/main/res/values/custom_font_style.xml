@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="font17B">
+        <item name="android:fontFamily">@font/pretendard_bold</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="list">
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="badge">
+        <item name="android:fontFamily">@font/spoqahansansneo_medium</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="font13">
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">3sp</item>
+    </style>
+
+    <style name="font13B">
+        <item name="android:fontFamily">@font/pretendard_bold</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">3sp</item>
+    </style>
+
+    <style name="eventlist">
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="title">
+        <item name="android:fontFamily">@font/pretendard_bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+    </style>
+
+    <style name="font14">
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+    </style>
+
+    <style name="font14_active">
+        <item name="android:fontFamily">@font/pretendard_bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+    </style>
+
+    <style name="font15">
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+        <item name="fontWeight">400</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+    </style>
+
+    <style name="font16B">
+        <item name="android:fontFamily">@font/pretendard_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontWeight">700</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+    </style>
+
+    <style name="font13M">
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+        <item name="android:textSize">13sp</item>
+        <item name="fontWeight">500</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">3sp</item>
+    </style>
+    <style name="font12M">
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontWeight">500</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+</resources>

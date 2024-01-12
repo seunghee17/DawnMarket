@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/categoryFragment">
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="kr.co.teamfresh.ssh.dawnmarket.presentation.view.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_categoryDetailFragment"
+            app:destination="@id/categoryDetailFragment"
+            app:enterAnim="@anim/anim_slide_in_left"
+            app:popEnterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popExitAnim="@anim/anim_slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/bookmarkFragment"
+        android:name="kr.co.teamfresh.ssh.dawnmarket.presentation.view.BookmarkFragment"
+        android:label="fragment_bookmark"
+        tools:layout="@layout/fragment_bookmark" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="kr.co.teamfresh.ssh.dawnmarket.presentation.view.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/mypageFragment"
+        android:name="kr.co.teamfresh.ssh.dawnmarket.presentation.view.MypageFragment"
+        android:label="fragment_mypage"
+        tools:layout="@layout/fragment_mypage" />
+    <fragment
+        android:id="@+id/shoppingFragment"
+        android:name="kr.co.teamfresh.ssh.dawnmarket.presentation.view.ShoppingFragment"
+        android:label="fragment_shopping"
+        tools:layout="@layout/fragment_shopping" />
+    <fragment
+        android:id="@+id/categoryDetailFragment"
+        android:name="kr.co.teamfresh.ssh.dawnmarket.presentation.view.CategoryDetailFragment"
+        android:label="CategoryDetailFragment" >
+        <action
+            android:id="@+id/action_categoryDetailFragment_to_categoryFragment2"
+            app:destination="@id/categoryFragment"
+            app:popUpTo="@id/categoryFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
